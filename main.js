@@ -1,29 +1,19 @@
 $(document).ready(function() {
   $.getJSON("data.json", function(json) {
-    // console.log(json);
+    console.log(json);
 
-    /* jsonData.getString("name");
-  jsonData.getString("description");
-  jsonData.getString("location"); */
-
-    // var hotSpots = getJSON("data.json");
-
-    var table = document.getElementById("table");
-
-    var tr = table.insertRow(-1);
-
+    var data = `<tbody>`;
     for (var i = 0; i < json.length; i++) {
-      tr = table.insertRow(-1);
-      var tabCell = tr.insertCell(-1);
-      tabCell.innerHTML = json[i];
+      data += `<tr>`;
+      data += `<td> ${json[i].name} <td>`;
+      data += `<td> ${json[i].description} <td>`;
+      data += `<td> ${json[i].location} <td>`;
+      data += `<tr>`;
     }
+    data += `<tbody`;
 
-    /* var divContainer = document.getElementById("table");
-    divContainer.innerHTML = "";
-    divContainer.appendChild(table); */
+    document.getElementById("button").onclick = function() {
+      document.getElementById("showData").innerHTML = data;
+    };
   });
 });
-
-/* function handleClickEvent() {
-  return $(document);
-} */
