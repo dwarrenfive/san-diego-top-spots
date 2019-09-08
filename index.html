@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>San Diego Hot Spots</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"
-      rel="stylesheet"
-    />
+    <title>San Diego Top Spots</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Permanent+Marker&display=swap" rel="stylesheet">
+    
     <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -19,22 +15,64 @@
   </head>
 
   <body>
-    <h1>San Diego Hot Spots</h1>
 
-    <button id="button">Find Hot Spots!</button>
+    <style>
+      h1 {
+        font-family: 'Permanent Marker';
+        margin: 40px 0px 40px 0px;
+      }
+      body {
+        background-image: url('san-diego.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        margin: 75px;
+      }
+      button {
+        margin: 10px;
+      }
+      thead {
+        font-size: 1.7vw;
+        font-family: 'Indie Flower';
+      }
+      tbody {
+        font-size: 1.2vw;
+      }
+      #name {
+        text-align: left;
+      }
+      #info {
+        text-align: center;
+      }
+      #area {
+        text-align: right;
+      }
+      
+    </style>
+
+    <center><h1 class="white-text">San Diego Top Spots</h1></center>
+
+    <button class="waves-effect waves-light btn-large blue darken-2" id="button">Find Hot Spots!</button>
 
     <table>
-      <thead>
-        <td>Name</td>
-        <td>Description</td>
-        <td>Loaction</td>
-      </thead>
-      <tbody id="showData"></tbody>
+        <thead>
+            <td class="white-text" id='name'>Name</td>
+            <td class="white-text" id="info" >Description</td>
+            <td class="white-text" id="area" >Loaction</td>
+          </thead>
+    </table>
+
+    <table>
+      <tbody class="white-text" id="showData"></tbody>
     </table>
 
 </body>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="main.js" charset="utf-8"></script>
+
   </body>
 </html>
+
+
