@@ -15,6 +15,7 @@ $(document).ready(function() {
 
     document.getElementById("button").onclick = function() {
       document.getElementById("showData").innerHTML = data;
+      // console.log();
     };
   });
 });
